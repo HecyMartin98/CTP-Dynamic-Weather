@@ -1,0 +1,14 @@
+For Rain Speed
+Velocity over lifetime: Y
+
+For Wind effects
+Velocity over lifetime: X
+
+For Amount
+Emissions rate over time
+
+For Size of area
+Shape: scale X and Z
+
+For Size of rain drops
+3D start size: X, Y and Z (if this is bigger rain speed must increase and amount and vise versa for the other settings)
