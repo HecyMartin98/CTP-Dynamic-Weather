@@ -62,7 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Movement.cs" />
+    <Compile Include="Assets\Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\PSEditor.cs" />
     <None Include="Assets\Downloaded Assests\SkyBox\SkySerie Freebie\Hdri setup.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/CTP-Dynamic-Weather/Dynamic Weather System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
