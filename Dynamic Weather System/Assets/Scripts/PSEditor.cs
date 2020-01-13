@@ -12,10 +12,10 @@ public class PSEditor : MonoBehaviour
     void Start()
     {
 
-        ParticleSystem rainPS = GetComponent<ParticleSystem>();
-        var emission = rainPS.main;
+        //ParticleSystem rainPS = GetComponent<ParticleSystem>();
+        //var emission = rainPS.main;
 
-        rain. = 100.0f;
+       // rain. = 100.0f;
     }
 
     void OnTriggerEnter(Collider col)
