@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0CA1A248-5318-310F-4A50-53A569BED469}</ProjectGuid>
+    <ProjectGuid>{E8667F96-E1BC-46E9-AD8A-AE50B83317B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,37 +66,37 @@
     <Compile Include="Assets\Script\TimeController.cs" />
     <None Include="Assets\TerrainPackage\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TerrainTools">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TerrainTools.Editor">
-      <HintPath>G:/UWE work/Year 3/CTP/CTP Rain System new/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>G:/UWE work/Year 3/CTP/CTP-Dynamic-Weather/CTP Rain System (new)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>G:/UWE work/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
