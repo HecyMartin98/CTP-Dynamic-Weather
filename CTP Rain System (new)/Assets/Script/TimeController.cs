@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TimeController : MonoBehaviour
 {
@@ -10,95 +11,95 @@ public class TimeController : MonoBehaviour
 
     [Range(0, 1)] [SerializeField] private float currentTimeOfDay = 0f;
     private float timeMultiplier = 1f;
-    private float sunInitialIntensity;
+    private float sunInitialIntensity = 1f;
     private int year = 364;
 
-    public float dayOfYear = 0f;
-    public float currentYear = 2020f;
+    public int dayOfYear = 0;
+    public int currentYear = 2020;
 
+    public enum seasonEnum
+    {
+        Winter,
+        Spring,
+        Summer,
+        Autumn
+    }
+    seasonEnum activeSeason;
+
+    [Serializable]
     public struct Seasons
     {
-        public float sunRise = 0.23f;
-        public float SunSete = 0.73f; 
+        public string name;
+        public float sunRise;
+        public float sunSet;
+        public float nightDuration;
+        public float daysOfSeasonStart;
+        public float chanceOfRain;
+        public float chanceOfSnow;
     }
-
-    //Need Array of seasons
-    //make a struct called seasons, make it serializable, Have two floats sunrise sunset. later on add % snow and rain, intensity and emission
-
-
+    public Seasons[] seasons;
 
     void start()
     {
+        
         sunInitialIntensity = sun.intensity;
     }
 
     void Update()
     {
         UpdateSun();
-        SeasonManager();
+        
 
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
-
-        if (currentTimeOfDay >= 1f)
+        //Increases day
+        if (currentTimeOfDay >= 1)
         {
-            currentTimeOfDay = 0f;
+            currentTimeOfDay = 0;
             dayOfYear++;
+            SeasonCheck();
         }
 
         if (dayOfYear >= year)
         {
-            dayOfYear = 0f;
+            dayOfYear = 0;
             currentYear++;
         }
     }
-
+    float intensityMultiplier = 1f;
     void UpdateSun()
     {
         sun.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) - 90, 170, 0);
 
-        float intensityMultiplier = 1;
-        //NightTime
-        if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f)
-        {
-            intensityMultiplier = 0;
-        }
+       
+        ////NightTime            0.23f,                        0.75f
+        //if (currentTimeOfDay <= 0 + seasons[(int)activeSeason].nightDuration ||  currentTimeOfDay >= 1- seasons[(int)activeSeason].nightDuration)
+        //{
+        //    intensityMultiplier = 0;
+        //}
         //SunRise
-        else if (currentTimeOfDay <= 0.25f)
+        if (currentTimeOfDay <= seasons[(int)activeSeason].sunRise)
         {
             intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.23f) * (1 / 0.02f));
         }
         //SunSet
-        else if (currentTimeOfDay >= 0.73f)
+        else if (currentTimeOfDay >= seasons[(int)activeSeason].sunSet)
         {
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
         }
 
+        Debug.Log(sun.intensity);
         sun.intensity = sunInitialIntensity * intensityMultiplier;
     }
 
-    //void SeasonManager()
-    //{
-    //    //winter =89 days Autumn =90 days Spring =93 and Summer=94
-    //    //winter starts 10 days before the new year, so Winter = 79days then set it back to winter after Autumn
-
-    //    if (dayOfYear <=79f)
-    //    {
-    //        CurrentSeason Spring;
-    //    }
-
-    //    else if (dayOfYear <= 172)
-    //    {
-    //        CurrentSeason Summer;
-    //    }
-
-    //    else if (dayOfYear <= 266)
-    //    {
-    //        CurrentSeason Autmn;
-    //    }
-
-    //    else if (dayOfYear <= 356)
-    //    {
-    //        CurrentSeason Winter;
-    //    }
-    //}
+    void SeasonCheck()
+    {
+        //winter =89 days Autumn =90 days Spring =93 and Summer=94
+        //winter starts 10 days before the new year, so Winter = 79days then set it back to winter after Autumn
+            
+        if(seasons[(int)activeSeason].daysOfSeasonStart == dayOfYear)
+        {
+            activeSeason++;
+        }
+       
+    }
 }
