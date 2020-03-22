@@ -33,7 +33,7 @@ public class TimeController : MonoBehaviour
         public float sunRise;
         public float sunSet;
         public float nightDuration;
-        public float daysOfSeasonStart;
+        public float dayOfSeasonStart;
         public float chanceOfRain;
         public float chanceOfSnow;
     }
@@ -96,7 +96,7 @@ public class TimeController : MonoBehaviour
         //winter =89 days Autumn =90 days Spring =93 and Summer=94
         //winter starts 10 days before the new year, so Winter = 79days then set it back to winter after Autumn
             
-        if(seasons[(int)activeSeason].daysOfSeasonStart == dayOfYear)
+        if(seasons[(int)activeSeason].dayOfSeasonStart == dayOfYear)
         {
             activeSeason++;
         }
