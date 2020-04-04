@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Script\Clouds\Noise\WeatherMap.cs" />
     <Compile Include="Assets\Script\Clouds\Noise\WorleyNoiseSettings.cs" />
     <Compile Include="Assets\Script\DayController\TimeController.cs" />
+    <Compile Include="Assets\Script\Movement\CamMovement.cs" />
     <Compile Include="Assets\Script\Test\Container\RayStepVis.cs" />
     <Compile Include="Assets\Script\Test\ContainerVis.cs" />
     <Compile Include="Assets\Script\Test\Debug Viewer\Core\DebugViewer.cs" />
