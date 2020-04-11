@@ -1,25 +1,5 @@
 Base path: 'G:/UWE work/Unity/Editor/Data', plugins path 'G:/UWE work/Unity/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-Cmd: compileSnippet
-  api=4 type=1 insize=11846 outsize=5706 kw=SHADOWS_SPLIT_SPHERES pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  api=4 insize=839 outsize=632 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4919 outsize=2320 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=1250 outsize=1522 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=1321 outsize=1031 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4443 outsize=2478 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=927 outsize=1119 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=1522 outsize=1121 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=2529 outsize=7731 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10215 outsize=3240 ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=158683 outsize=6070 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_COMBINED SHADOWS_SHADOWMASK pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+  error: 2 plat 4 at WeatherMapGen.compute(1): Illegal character in shader file
+  api=4 insize=2642 outsize=0 ok=0
