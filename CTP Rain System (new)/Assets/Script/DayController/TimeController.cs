@@ -71,11 +71,7 @@ public class TimeController : MonoBehaviour
         sun.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) - 90, 170, 0);
 
        
-        ////NightTime            0.23f,                        0.75f
-        //if (currentTimeOfDay <= 0 + seasons[(int)activeSeason].nightDuration ||  currentTimeOfDay >= 1- seasons[(int)activeSeason].nightDuration)
-        //{
-        //    intensityMultiplier = 0;
-        //}
+        
         //SunRise
         if (currentTimeOfDay <= seasons[(int)activeSeason].sunRise)
         {
@@ -87,7 +83,7 @@ public class TimeController : MonoBehaviour
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
         }
 
-        Debug.Log(sun.intensity);
+        
         sun.intensity = sunInitialIntensity * intensityMultiplier;
     }
 
