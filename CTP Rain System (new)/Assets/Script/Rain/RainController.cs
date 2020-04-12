@@ -15,6 +15,6 @@ public class RainController : MonoBehaviour
     void RainChancePerSeason()
     {
         //if the rain chance is very high likely to see more rain more storms.
-        if()
+        
     }
 }

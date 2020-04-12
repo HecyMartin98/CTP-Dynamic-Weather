@@ -358,7 +358,7 @@ Transform:
   - {fileID: 1810512253}
   - {fileID: 2081494591}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047973078
 GameObject:
@@ -375,7 +375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1047973079
 Transform:
   m_ObjectHideFlags: 0
@@ -383,13 +383,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047973078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.7, y: 63.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 31.111113, z: 0}
+  m_LocalScale: {x: 0.8333333, y: 0.5555556, z: 0.8333333}
   m_Children:
   - {fileID: 1762852461}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1810512253}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1289879834
 GameObject:
@@ -483,7 +483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1762852461
 Transform:
   m_ObjectHideFlags: 0
@@ -5248,7 +5248,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
-  m_Children: []
+  m_Children:
+  - {fileID: 1047973079}
   m_Father: {fileID: 1042991878}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5494,12 +5495,87 @@ PrefabInstance:
     - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
         type: 3}
       propertyPath: seasons.Array.data[0].sunRise
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
         type: 3}
       propertyPath: seasons.Array.data[0].sunSet
-      value: 0.58
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[0].chanceOfRain
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[1].chanceOfRain
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[2].chanceOfRain
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[3].chanceOfRain
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[0].dayOfSeasonStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: dayOfYear
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[1].dayOfSeasonEnd
+      value: 172
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[2].dayOfSeasonEnd
+      value: 266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[3].dayOfSeasonEnd
+      value: 356
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[0].dayOfSeasonEnd
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: year
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[1].sunRise
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[3].sunRise
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[2].sunSet
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792208712724570006, guid: 2b232bb6f06f9dd41b6184b620e16610,
+        type: 3}
+      propertyPath: seasons.Array.data[2].sunRise
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b232bb6f06f9dd41b6184b620e16610, type: 3}
