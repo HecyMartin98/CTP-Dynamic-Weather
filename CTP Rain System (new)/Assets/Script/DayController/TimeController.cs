@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class TimeController : MonoBehaviour
 {
-
     [SerializeField] private Light sun;
     [SerializeField] private float secondsInFullDay = 120f;
 
@@ -16,10 +14,12 @@ public class TimeController : MonoBehaviour
 
     private int year = 364;
 
-    private float rainTimer = 10f;
+    private float rainTimer;
 
     public int dayOfYear = 0;
     public int currentYear = 2020;
+
+    public ParticleSystem rain;
 
     bool isRaining = false;
 
@@ -45,16 +45,15 @@ public class TimeController : MonoBehaviour
     }
     public Seasons[] seasons;
 
-    void Start()
+    void start()
     {
-        
         sunInitialIntensity = sun.intensity;
     }
 
     void Update()
     {
         UpdateSun();
-        
+        RainChance();
 
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
         //Increases day
@@ -63,7 +62,7 @@ public class TimeController : MonoBehaviour
             currentTimeOfDay = 0;
             dayOfYear++;
             SeasonCheck();
-            RainChance();
+            
         }
 
         if (dayOfYear >= year)
@@ -82,13 +81,13 @@ public class TimeController : MonoBehaviour
         //SunRise
         if (currentTimeOfDay <= seasons[(int)activeSeason].sunRise)
         {
-            intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - seasons[(int)activeSeason].sunRise) * (1 / 0.02f));
+            intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.24f) * (1 / 0.02f));
             //Debug.Log(seasons[(int)activeSeason].sunRise);
         }
         //SunSet
         else if (currentTimeOfDay >= seasons[(int)activeSeason].sunSet)
         {
-            intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - seasons[(int)activeSeason].sunSet) * (1 / 0.02f)));
+            intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
         }
 
         
@@ -120,24 +119,29 @@ public class TimeController : MonoBehaviour
         if(!isRaining)
         {
             float temp = Random.Range(0f, 100f);
+            Debug.Log(Random.Range(0f, 100f) + " " + ("chance of rain"));
             if(temp < seasons[(int)activeSeason].chanceOfRain)
             {
                 isRaining = true;
-                
+                rain.gameObject.SetActive(true);
             }
             
 
         }
-        else if (rainTimer > 0f)
+        else if (rainTimer == 0f && isRaining == false)
         {
-            rainTimer = Random.Range(12f,20f);
+            rainTimer = 10f;
+            Debug.Log(("rain timer") + rainTimer);
         }
         else
         {
             rainTimer -= Time.deltaTime;
-            if(rainTimer < 0f)
+            Debug.Log(("rain timer") + rainTimer);
+            if (rainTimer < 0f)
             {
                isRaining = !isRaining;
+                Debug.Log("is it raining ?" + isRaining);
+                rain.gameObject.SetActive(false);
             }
         }
     }
